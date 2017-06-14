@@ -1,0 +1,9 @@
+
+crij_particulier.crij_particulier:
+  path: '/crijparticulier'
+  defaults:
+    _form: '\Drupal\crij_particulier\Form\CrijParticulier'
+    _title: 'Créer mon espace personnel pour particulier'
+  requirements:
+    _permission: 'access content'
+

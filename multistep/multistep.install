@@ -1,0 +1,34 @@
+<?php
+
+function multistep_schema() {
+	$schema['multistep'] = array(
+		'fields' => array(
+			'id'=>array(
+				'type'=>'serial',
+				'not null' => TRUE,
+			),
+			'statut'=> array(
+				'type'=>'int',
+			),
+			'nom' => array(
+				'type' => 'varchar',
+				'length' => 50,
+			),
+			'prenom' => array(
+				'type' => 'varchar',
+				'length' => 50,
+			),
+			'raison_sociale' => array(
+				'type' => 'varchar',
+				'length' => 100,
+			)/*,
+			'email' => array(
+				'type' => 'varchar',
+				'length' => 100,
+			)*/
+		),
+		'primary key' => array('id'),
+	);
+
+return $schema;
+}

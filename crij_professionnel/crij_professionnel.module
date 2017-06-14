@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Contains crij_professionnel.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function crij_professionnel_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the crij_professionnel module.
+    case 'help.page.crij_professionnel':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module espace personnel professionnel') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+function crij_professionnel_page_attachments(array &$attachments) {
+  if (!\Drupal::currentUser()->hasPermission('access contextual links')) {
+    return;
+  }
+
+  $attachments['#attached']['library'][] = 'crij_professionnel/crij_professionnel.form_css';
+}

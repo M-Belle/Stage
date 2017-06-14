@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Contains crij_particulier.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function crij_particulier_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the crij_particulier module.
+    case 'help.page.crij_particulier':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module espace personnel particulier') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+function crij_particulier_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'crij_particulier/crij_particulier.form_css';
+}
+function crij_particulier_checkmail($mail){
+	$query = \Drupal::database()->select('users_field_data', 'ufd');
+	$query->addExpression('COUNT(mail)');
+	$query->condition('mail', $mail);
+	$count = $query->execute()->fetchField();
+	\Drupal::state()->set('data_mail', $count);	
+}
+function crij_particulier_checklogin($login){
+	$query = \Drupal::database()->select('users_field_data', 'ufd');
+	$query->addExpression('COUNT(user_name)');
+	$query->condition('user_name', $login);
+	$count = $query->execute()->fetchField();
+	\Drupal::state()->set('data_login', $count);
+	
+}
+

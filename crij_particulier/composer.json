@@ -1,0 +1,14 @@
+{
+  "name": "drupal/crij_particulier",
+  "type": "drupal-module",
+  "description": "Module espace personnel particulier",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/crij_particulier",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/crij_particulier",
+    "source": "http://cgit.drupalcode.org/crij_particulier"
+  },
+  "require": { }
+}

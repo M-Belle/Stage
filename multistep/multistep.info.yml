@@ -1,0 +1,5 @@
+name: multistep
+type: module
+description: formulaire multi step v2
+core: 8.x
+package: custom

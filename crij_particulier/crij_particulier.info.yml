@@ -1,0 +1,5 @@
+name: crij_particulier
+type: module
+description: Module espace personnel particulier
+core: 8.x
+package: crij

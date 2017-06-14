@@ -1,0 +1,8 @@
+multi_step.default_form:
+  title: 'Exemple'
+  route_name: multi_step.default_form
+  description: 'A description for the menu entry'
+  parent: main
+  menu_name: main
+  weight: 10
+

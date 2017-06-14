@@ -1,0 +1,5 @@
+crij_particulier.form_css:
+  version: 1.x
+  css:
+    theme:
+      css/crij_particulier.css: {}

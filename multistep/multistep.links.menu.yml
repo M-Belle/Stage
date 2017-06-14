@@ -1,0 +1,8 @@
+multistep.multistep_form_one:
+  title: 'Test'
+  route_name: multistep.multistep_form_one
+  description: 'A description for the menu entry'
+  parent: main
+  menu_name: main
+  weight: 9
+

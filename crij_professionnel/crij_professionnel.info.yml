@@ -1,0 +1,5 @@
+name: crij_professionnel
+type: module
+description: Module espace personnel professionnel
+core: 8.x
+package: crij

@@ -1,0 +1,15 @@
+
+crij_professionnel.crij_professionnel:
+  path: '/crijprofessionnel'
+  defaults:
+    _form: '\Drupal\crij_professionnel\Form\CrijProfessionnel'
+    _title: 'Créer mon espace personnel pour professionnel'
+  requirements:
+    _permission: 'access content'
+crij_professionnel.autocomplete_cities:
+  path: '/crijprofessionnel/cities'
+  defaults:
+    _controller: '\Drupal\crij_professionnel\Controller\SearchCitiesController::autocomplete'
+  requirements:
+    _permission: 'access content'
+
